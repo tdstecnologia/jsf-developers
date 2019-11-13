@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <h:link class="navbar-brand" outcome="/index.xhtml" >
+                    <b>JSF Developers</b>
+                </h:link>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Funções
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <h:link class="dropdown-item" outcome="/navegacao/pagina-um.xhtml" >Navegação</h:link>
+                                <div class="dropdown-divider"></div>
+                                <h:link class="dropdown-item" outcome="/escopo/request-scope.xhtml" >Request Scope</h:link>
+                                <h:link class="dropdown-item" outcome="/escopo/view-scope.xhtml" >View Scope</h:link>
+                                <h:link class="dropdown-item" outcome="/escopo/session-scope.xhtml" >Session Scope</h:link>
+                                <h:link class="dropdown-item" outcome="/escopo/application-scope.xhtml" >Application Scope</h:link>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</html>
+

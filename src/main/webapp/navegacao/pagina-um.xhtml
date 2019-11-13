@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <ui:composition template="/WEB-INF/templates/default.xhtml">
+
+         <ui:define name="ui-titulo-funcao">Página UM</ui:define>
+        
+        <ui:define name="body" >
+
+            <h:form>
+                <h:commandButton action="#{navegacaoController.paginaDois()}" value="Página DOIS" class="btn btn-primary" ></h:commandButton>
+                <br/><br/>
+                <h:commandButton action="#{navegacaoController.paginaDoisRedirect()}" value="Página DOIS - Redirect" class="btn btn-primary" ></h:commandButton>
+                <br/><br/>
+                <h:commandLink action="#{navegacaoController.paginaDois()}" value="Navegar para página DOIS" ></h:commandLink>
+                <br/><br/>
+                <h:commandLink action="#{navegacaoController.paginaDoisRedirect()}" value="Navegar para página DOIS - Redirect" ></h:commandLink>
+                <br/><br/>
+                <h:link outcome="/navegacao/pagina-dois?faces-redirect=true" value="Ir para página DOIS"></h:link>
+                
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>
+
