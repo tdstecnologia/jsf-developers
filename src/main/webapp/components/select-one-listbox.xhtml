@@ -13,14 +13,14 @@
 
             <h:form>
 
-                <h:selectOneListbox class="form-control" value="#{selectOneListBoxController.cor}" size="3">
-                    <f:selectItems value="#{selectOneListBoxController.cores}" var="cor"
+                <h:selectOneListbox class="form-control" value="#{selectOneListboxController.cor}" size="3">
+                    <f:selectItems value="#{selectOneListboxController.cores}" var="cor"
                                    itemLabel="#{cor}" itemValue="#{cor}" />
                 </h:selectOneListbox>
                 <br/>
-                <h:outputLabel class="h4" value="Cor selecionada: #{selectOneListBoxController.cor}"></h:outputLabel>
+                <h:outputLabel class="h4" value="Cor selecionada: #{selectOneListboxController.cor}"></h:outputLabel>
                 <br/>
-                <h:commandButton action="#{selectOneListBoxController.exibirCorSelecionada()}" value="Exibir Cor Selecionada" class="btn btn-primary" ></h:commandButton>
+                <h:commandButton action="#{selectOneListboxController.exibirCorSelecionada()}" value="Exibir Cor Selecionada" class="btn btn-primary" ></h:commandButton>
             </h:form>
         </ui:define>
 

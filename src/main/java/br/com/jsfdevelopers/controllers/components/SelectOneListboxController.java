@@ -9,12 +9,12 @@ import javax.inject.Named;
 
 @Named
 @RequestScoped
-public class SelectOneListBoxController implements Serializable {
+public class SelectOneListboxController implements Serializable {
 
     private String cor;
     private List<String> cores;
 
-    public SelectOneListBoxController() {
+    public SelectOneListboxController() {
     }
 
     

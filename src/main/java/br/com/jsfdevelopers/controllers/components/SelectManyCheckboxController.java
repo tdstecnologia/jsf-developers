@@ -9,18 +9,21 @@ import javax.inject.Named;
 
 @Named
 @RequestScoped
-public class SelectOneRadioController implements Serializable {
+public class SelectManyCheckboxController implements Serializable {
 
-    private String cor;
-    private Integer codigo;
+    private String cor = "";
+    private List<Integer> codigos;
     private List<Cor> cores;
 
-    public SelectOneRadioController() {
+    public SelectManyCheckboxController() {
     }
 
     public void exibirCorSelecionada() {
-        if(Objects.nonNull(this.codigo)){
-            this.cor = getCores().get(getCores().indexOf(new Cor(codigo, ""))).toString();
+        if(Objects.nonNull(this.codigos) && !this.codigos.isEmpty()){
+            codigos.forEach( c -> {
+                this.cor += " "+getCores().get(getCores().indexOf(new Cor(c, ""))).toString();
+            });
+            
         }
         System.out.println("Cor selecionada: " + cor);
     }
@@ -33,14 +36,14 @@ public class SelectOneRadioController implements Serializable {
         this.cor = cor;
     }
 
-    public Integer getCodigo() {
-        return codigo;
+    public List<Integer> getCodigos() {
+        return codigos;
     }
 
-    public void setCodigo(Integer codigo) {
-        this.codigo = codigo;
+    public void setCodigos(List<Integer> codigos) {
+        this.codigos = codigos;
     }
-
+    
     public List<Cor> getCores() {
         if (Objects.isNull(this.cores)) {
             this.cores = new ArrayList<>();
