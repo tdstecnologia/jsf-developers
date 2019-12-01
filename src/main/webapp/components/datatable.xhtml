@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <ui:composition template="/WEB-INF/templates/default.xhtml">
+
+        <ui:define name="ui-titulo-funcao">Datatables</ui:define>
+
+        <ui:define name="body" >
+
+
+            <h:form>
+
+                <h:dataTable class="table" value="#{dataTableController.carros}" var="carro" >
+
+                    <h:column>
+                        <f:facet name="header">Placa</f:facet>
+                            #{carro.placa}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Modelo</f:facet>
+                            #{carro.modelo}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">Marca</f:facet>
+                            #{carro.marca}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Ação</f:facet>
+                        <h:commandButton class="btn btn-primary" action="#{dataTableController.itemSelecionado(carro.placa)}" value="Ação" ></h:commandButton>
+                    </h:column>
+                    
+                </h:dataTable>
+
+            </h:form>
+        </ui:define>
+
+    </ui:composition>
+</html>
+
