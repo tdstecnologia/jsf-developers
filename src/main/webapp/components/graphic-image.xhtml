@@ -10,17 +10,16 @@
 
         <ui:define name="body" >
 
-            <div class="jumbotron">
-                <hr class="my-4"></hr>
-                <h:graphicImage library="images"  name="951.jpg" class="img-fluid"  ></h:graphicImage>
-                <a href="https://br.freepik.com/fotos-vetores-gratis/infografico">criado por fullvector - br.freepik.com</a>
+            <h:graphicImage library="images"  name="nfsu-1.jpg" class="rounded mx-auto d-block"  ></h:graphicImage>
+
+            <hr class="my-4"></hr>
+
+            <h:graphicImage class="rounded mx-auto d-block" id="image" url="data:image/jpeg;base64,#{graphicImageController.imagemBytes}"></h:graphicImage>    
+
+            <div class="d-flex justify-content-center">
+                <a href="https://wallpapershome.com/games/simulation/need-for-speed-heat-screenshot-4k-22340.html">https://wallpapershome.com/</a>    
             </div>
-            
-            <f:view>     
-    This should show an image.
-    <h:graphicImage id="image" url="data:image/jpeg;base64,#{graphicImageController.imageBinaryData}"></h:graphicImage>    
-</f:view>
-            
+
         </ui:define>
 
     </ui:composition>
