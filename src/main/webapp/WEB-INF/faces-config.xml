@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <!-- configure-phase-listener -->
+    <lifecycle>
+        <phase-listener>br.com.jsfdevelopers.phaselistners.RestoreViewPhaseListner</phase-listener>
+        <phase-listener>br.com.jsfdevelopers.phaselistners.ApplyRquestValuesPhaseListner</phase-listener>
+        <phase-listener>br.com.jsfdevelopers.phaselistners.InvokeApplicationViewPhaseListner</phase-listener>
+        <phase-listener>br.com.jsfdevelopers.phaselistners.UpdateModelValuesViewPhaseListner</phase-listener>
+        <phase-listener>br.com.jsfdevelopers.phaselistners.ProcessValidationsPhaseListner</phase-listener>
+        <phase-listener>br.com.jsfdevelopers.phaselistners.RenderResponsePhaseListner</phase-listener>
+    </lifecycle>
+
+</faces-config>
